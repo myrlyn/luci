@@ -587,7 +587,8 @@ elseif action == "resources" then
 	o = s:option(Value, "blkioweight",
 		translate("Block IO Weight"),
 		translate("Block IO weight (relative weight) accepts a weight value between 10 and 1000."))
-	o.placeholder = "500"
+	--o.placeholder = "500"
+	--o.placeholder = nil
 	o.rmempty = true
 	o.datatype="uinteger"
 	o.default = container_info.HostConfig.BlkioWeight
